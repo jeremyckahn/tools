@@ -1,4 +1,4 @@
-export PATH=$HOME/local/node/bin:$PATH
+#export PATH=$HOME/local/node/bin:$PATH
 alias ls="ls -lah"
 alias closure='java -jar ~/Tools/compiler-latest/compiler.jar'
 alias svnaddall='sh ~/Tools/svnaddall.sh'
