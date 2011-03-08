@@ -1,9 +1,9 @@
-Make sure this directory is in your user's home directory.
+Make sure this directory is in your user's home directory. (~/)
 
 Make sure it is called "Tools." (~/Tools)
 
-Make sure you copy the .bash_profile file directly into you user's root directory (~/)
+Make sure you copy the .bash_profile file directly into you user's root directory (~/.bash_profile)
 
-Make sure you start a new terminal session see the new commands.
+Make sure you start a new terminal session to see the new commands.
 
 Make sure you enjoy.  :)
