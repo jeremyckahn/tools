@@ -1,1 +1,2 @@
 :syntax enable
+:set number
