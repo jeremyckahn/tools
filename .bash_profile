@@ -8,4 +8,5 @@ alias noblanklines='grep -v "^[[:space:]]*$"'
 alias delds='sudo find . -name ".DS_Store" -depth -exec rm {} \;'
 alias cleanme='sh ~/Tools/cleanme.sh'
 alias pullall='git pull origin master;git pull origin dev;git pull origin gh-pages'
+alias cop='pbcopy&&pbpaste'
 
