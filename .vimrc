@@ -3,3 +3,4 @@
 :set hlsearch
 :set incsearch
 :set nocp
+:set autoindent
