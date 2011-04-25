@@ -4,3 +4,4 @@
 :set incsearch
 :set nocp
 :set autoindent
+:set autochdir
