@@ -18,6 +18,8 @@ nmap <leader>e :tabn<CR>
 nmap <leader>w :tabp<CR>
 nmap <leader>r :tabc<CR>
 nmap <leader>n :NERDTree<CR>
+nmap <leader>a :set autoindent<CR>
+nmap <leader>s :set noautoindent<CR>
 
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
