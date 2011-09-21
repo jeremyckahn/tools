@@ -5,8 +5,8 @@ set incsearch
 set nocp
 set autoindent
 set expandtab
-set shiftwidth=4
-set softtabstop=4
+set shiftwidth=2
+set softtabstop=2
 cnoreabbr nt NERDTree
 
 let mapleader = ","
@@ -20,6 +20,8 @@ nmap <leader>r :tabc<CR>
 nmap <leader>n :NERDTree<CR>
 nmap <leader>a :set autoindent<CR>
 nmap <leader>s :set noautoindent<CR>
+nmap <leader>d :set wrap<CR>
+nmap <leader>f :set nowrap<CR>
 
 hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 
