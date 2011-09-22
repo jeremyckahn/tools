@@ -33,3 +33,7 @@ endif
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
+
+" This `let` is needed for closetag.vim.  It is.  Don't move it.
+let g:closetag_html_style=1
+source ~/tools/vim/bundle/closetag.vim
