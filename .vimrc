@@ -8,6 +8,7 @@ set expandtab
 set shiftwidth=2
 set softtabstop=2
 cnoreabbr nt NERDTree
+call pathogen#infect('~/tools/vim/bundle')
 
 let mapleader = ","
 
