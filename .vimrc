@@ -70,7 +70,7 @@ endfunction
 """"""""""""""""""""""""""""""""""""""""""""""
 
 "Highlight cursor
-highlight CursorLine ctermbg=8 cterm=NONE
+"highlight CursorLine ctermbg=8 cterm=NONE
 
 if has('mouse')
   set mouse=a
