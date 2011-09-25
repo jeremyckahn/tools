@@ -24,10 +24,10 @@ nmap <leader>s :set noautoindent<CR>
 nmap <leader>d :set wrap<CR>
 nmap <leader>f :set nowrap<CR>
 
-hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+"hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 "Higlight current line only in insert mode
-autocmd InsertLeave * set nocursorline
-autocmd InsertEnter * set cursorline
+"autocmd InsertLeave * set nocursorline
+"autocmd InsertEnter * set cursorline
 
 " Folding stuff """""""""""""""""""""""""""""" 
 set foldmethod=indent " use the syntax file to create folds
