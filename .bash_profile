@@ -10,3 +10,8 @@ alias cleanme='sh ~/Tools/cleanme.sh'
 alias pullall='git pull origin master;git pull origin dev;git pull origin gh-pages'
 alias cop='pbcopy&&pbpaste'
 
+syncandpushpages () {
+  git checkout gh-pages
+  git merge master
+  git push origin gh-pages
+}
