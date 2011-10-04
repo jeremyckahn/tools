@@ -8,7 +8,13 @@ set expandtab
 set shiftwidth=2
 set softtabstop=2
 cnoreabbr nt NERDTree
-call pathogen#infect('~/tools/vim/bundle')
+
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
+colorscheme wombat
+"call pathogen#infect('~/tools/vim/bundle')
+
 
 let mapleader = ","
 
@@ -18,7 +24,7 @@ nmap <leader>q :tabnew<CR>
 nmap <leader>e :tabn<CR>
 nmap <leader>w :tabp<CR>
 nmap <leader>r :tabc<CR>
-nmap <leader>n :NERDTree<CR>
+nmap <leader>n :NERDTreeToggle<CR>
 nmap <leader>a :set autoindent<CR>
 nmap <leader>s :set noautoindent<CR>
 nmap <leader>d :set wrap<CR>
@@ -83,3 +89,8 @@ set nocompatible
 " This `let` is needed for closetag.vim.  It is.  Don't move it.
 let g:closetag_html_style=1
 source ~/tools/vim/bundle/closetag.vim
+
+" hi Warning guifg=#e7f6da guibg=#3A0505
+" show hidden whitespace
+set list listchars=tab:⇾\ ,trail:⇁
+set colorcolumn=80
