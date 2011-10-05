@@ -49,3 +49,4 @@ hi Number               guifg=#e5786d gui=none
 hi Special              guifg=#e7f6da gui=none
 
 
+hi ColorColumn ctermbg=blue guibg=none
