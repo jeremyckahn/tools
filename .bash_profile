@@ -17,3 +17,18 @@ syncandpushpages () {
   git merge master
   git push origin gh-pages
 }
+
+new_project () {
+  mkdir src/;
+  mkdir lib/;
+  touch README.md;
+  echo -e ".swp\n.DS_Store" > .gitignore;
+  git init;
+  git add src/ lib/ .gitignore README.md;
+  git commit -am "Initial commit.";
+  git status;
+}
+
+resource () {
+  source ~/.bash_profile
+}
