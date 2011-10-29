@@ -22,7 +22,7 @@ new_project () {
   mkdir src/;
   mkdir lib/;
   touch README.md;
-  echo -e ".swp\n.DS_Store" > .gitignore;
+  echo -e "*.swp\n.DS_Store" > .gitignore;
   git init;
   git add src/ lib/ .gitignore README.md;
   git commit -am "Initial commit.";
