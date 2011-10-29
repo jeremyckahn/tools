@@ -12,7 +12,7 @@ cnoreabbr nt NERDTree
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
-colorscheme wombat
+colorscheme darkblue
 "call pathogen#infect('~/tools/vim/bundle')
 
 
