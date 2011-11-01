@@ -94,3 +94,5 @@ source ~/tools/vim/bundle/closetag.vim
 " show hidden whitespace
 set list listchars=tab:⇾\ ,trail:⇁
 set colorcolumn=80
+
+set hidden
