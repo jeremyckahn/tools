@@ -1,3 +1,6 @@
 [submodule "vim/bundle/nerdtree"]
 	path = vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
+[submodule "iTerm-2-Color-Themes"]
+	path = iTerm-2-Color-Themes
+	url = https://github.com/baskerville/iTerm-2-Color-Themes.git
