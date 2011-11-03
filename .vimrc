@@ -12,7 +12,7 @@ cnoreabbr nt NERDTree
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
-colorscheme wombat
+colorscheme darkblue
 "call pathogen#infect('~/tools/vim/bundle')
 
 
@@ -94,3 +94,5 @@ source ~/tools/vim/bundle/closetag.vim
 " show hidden whitespace
 set list listchars=tab:⇾\ ,trail:⇁
 set colorcolumn=80
+
+set hidden
