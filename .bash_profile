@@ -11,6 +11,7 @@ alias pullall='git pull origin master;git pull origin dev;git pull origin gh-pag
 alias cop='pbcopy&&pbpaste'
 alias gs='git status'
 alias gd='git diff'
+alias gpm='git push origin master'
 
 syncandpushpages () {
   git checkout gh-pages
