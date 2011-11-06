@@ -12,6 +12,9 @@ alias cop='pbcopy&&pbpaste'
 alias gs='git status'
 alias gd='git diff'
 alias gpm='git push origin master'
+alias gb='git branch'
+alias gl='git log'
+alias gc='git checkout'
 
 syncandpushpages () {
   git checkout gh-pages
@@ -32,4 +35,5 @@ new_project () {
 
 resource () {
   source ~/.bash_profile
+  source ~/.bashrc
 }
