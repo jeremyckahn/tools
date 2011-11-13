@@ -96,3 +96,16 @@ set list listchars=tab:⇾\ ,trail:⇁
 set colorcolumn=80
 
 set hidden
+
+" Gui stuff
+if has("gui_running")
+  set lines=150 columns=230 " Maximize gvim window.
+
+  set guioptions-=T " Get rid of the toolbar
+  set guioptions-=e " Get rid of the GUI tabs
+  set guioptions-=r " Get rid of the right scrollbar
+  set guioptions-=R " Get rid of the right scrollbar
+  set guioptions-=l " Get rid of the left scrollbar
+  set guioptions-=L " Get rid of the left scrollbar
+  set guioptions-=b " Get rid of the bottom scrollbar
+endif
