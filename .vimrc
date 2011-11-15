@@ -109,3 +109,5 @@ if has("gui_running")
   set guioptions-=L " Get rid of the left scrollbar
   set guioptions-=b " Get rid of the bottom scrollbar
 endif
+
+:set backspace=indent,eol,start
