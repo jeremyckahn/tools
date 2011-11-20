@@ -16,6 +16,17 @@ alias gb='git branch'
 alias gl='git log'
 alias gc='git checkout'
 
+
+# Push the current directory
+pushit () {
+  git push origin `git branch | grep \* | sed 's/\* //'`
+}
+
+# Pull the current directory
+pullit () {
+  git pull origin `git branch | grep \* | sed 's/\* //'`
+}
+
 syncandpushpages () {
   git checkout gh-pages
   git merge master
