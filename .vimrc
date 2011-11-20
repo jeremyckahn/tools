@@ -12,7 +12,7 @@ cnoreabbr nt NERDTree
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
-colorscheme darkblue
+"colorscheme darkblue
 "call pathogen#infect('~/tools/vim/bundle')
 
 
@@ -29,11 +29,6 @@ nmap <leader>a :set autoindent<CR>
 nmap <leader>s :set noautoindent<CR>
 nmap <leader>d :set wrap<CR>
 nmap <leader>f :set nowrap<CR>
-
-"hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
-"Higlight current line only in insert mode
-"autocmd InsertLeave * set nocursorline
-"autocmd InsertEnter * set cursorline
 
 " Folding stuff """""""""""""""""""""""""""""" 
 set foldmethod=indent " use the syntax file to create folds
@@ -75,9 +70,6 @@ function! MyFoldText()
 endfunction
 """"""""""""""""""""""""""""""""""""""""""""""
 
-"Highlight cursor
-"highlight CursorLine ctermbg=8 cterm=NONE
-
 if has('mouse')
   set mouse=a
 endif
@@ -90,11 +82,11 @@ set nocompatible
 let g:closetag_html_style=1
 source ~/tools/vim/bundle/closetag.vim
 
-highlight OverLength ctermbg=11 ctermfg=15 guibg=#592929
 " show hidden whitespace
 set list listchars=tab:⇾\ ,trail:⇁
 set colorcolumn=80
 hi ColorColumn ctermbg=Magenta guibg=lightgrey
+highlight Comment ctermfg=darkgreen
 
 set hidden
 
