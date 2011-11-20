@@ -90,10 +90,11 @@ set nocompatible
 let g:closetag_html_style=1
 source ~/tools/vim/bundle/closetag.vim
 
-" hi Warning guifg=#e7f6da guibg=#3A0505
+highlight OverLength ctermbg=11 ctermfg=15 guibg=#592929
 " show hidden whitespace
 set list listchars=tab:⇾\ ,trail:⇁
 set colorcolumn=80
+hi ColorColumn ctermbg=Magenta guibg=lightgrey
 
 set hidden
 
