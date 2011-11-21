@@ -27,6 +27,11 @@ pullit () {
   git pull origin `git branch | grep \* | sed 's/\* //'`
 }
 
+# For all files in the current directory, convert tabs to 2 spaces.
+tabs_to_spaces_all () {
+  for FILE in ./*; do expand -t 2 $FILE > /tmp/spaces && mv /tmp/spaces $FILE ; done;
+}
+
 syncandpushpages () {
   git checkout gh-pages
   git merge master
