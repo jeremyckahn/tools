@@ -1,4 +1,4 @@
-export PATH=$HOME/local/node/bin:$PATH
+export PATH=$HOME/node/out/Release/:$PATH
 alias ll="ls -lah"
 alias closure='java -jar ~/Tools/compiler-latest/compiler.jar'
 alias svnaddall='sh ~/Tools/svnaddall.sh'
@@ -15,6 +15,7 @@ alias gpm='git push origin master'
 alias gb='git branch'
 alias gl='git log'
 alias gc='git checkout'
+alias v='vim'
 
 
 # Push the current directory
