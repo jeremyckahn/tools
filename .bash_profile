@@ -16,6 +16,7 @@ alias gb='git branch'
 alias gl='git log'
 alias gc='git checkout'
 alias v='vim'
+alias s='cd ~/Sites'
 
 
 # Push the current directory
