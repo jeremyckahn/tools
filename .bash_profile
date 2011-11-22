@@ -33,6 +33,11 @@ tabs_to_spaces_all () {
   for FILE in ./*; do expand -t 2 $FILE > /tmp/spaces && mv /tmp/spaces $FILE ; done;
 }
 
+kill_swps () {
+  find ./ -name "*.swp" -exec echo "Deleting: " {} \; -exec rm {} \;
+  find ./ -name "*.swo" -exec echo "Deleting: " {} \; -exec rm {} \;
+}
+
 syncandpushpages () {
   git checkout gh-pages
   git merge master
