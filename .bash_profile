@@ -12,11 +12,12 @@ alias cop='pbcopy&&pbpaste'
 alias gs='git status'
 alias gd='git diff'
 alias gpm='git push origin master'
-alias gb='git branch'
+alias gb='git branch -a'
 alias gl='git log'
 alias gc='git checkout'
 alias v='vim'
 alias s='cd ~/Sites'
+alias t='cd ~/tools'
 
 
 # Push the current directory
