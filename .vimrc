@@ -26,8 +26,8 @@ nmap <leader>s :set noautoindent<CR>
 nmap <leader>d :set wrap<CR>
 nmap <leader>f :set nowrap<CR>
 
-" Folding stuff """""""""""""""""""""""""""""" 
-set foldmethod=indent " use the syntax file to create folds
+" Folding stuff """"""""""""""""""""""""""""""
+"set foldmethod=indent " use the syntax file to create folds
 
 " Set a nicer foldtext function via http://vim.wikia.com/wiki/Customize_text_for_closed_folds
 "set foldtext=MyFoldText()
