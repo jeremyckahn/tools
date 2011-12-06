@@ -1,23 +1,17 @@
 export PATH=$HOME/node/out/Release/:$PATH
 alias ll="ls -lah"
-alias closure='java -jar ~/Tools/compiler-latest/compiler.jar'
-alias svnaddall='sh ~/Tools/svnaddall.sh'
-alias gofast='sudo sh ~/Tools/gofast.sh'
-alias goslow='sudo sh ~/Tools/goslow.sh'
-alias noblanklines='grep -v "^[[:space:]]*$"'
-alias delds='sudo find . -name ".DS_Store" -depth -exec rm {} \;'
-alias cleanme='sh ~/Tools/cleanme.sh'
-alias pullall='git pull origin master;git pull origin dev;git pull origin gh-pages'
-alias cop='pbcopy&&pbpaste'
 alias gs='git status'
 alias gd='git diff'
-alias gpm='git push origin master'
 alias gb='git branch -a'
 alias gl='git log'
 alias gc='git checkout'
 alias v='vim'
 alias s='cd ~/Sites'
 alias t='cd ~/tools'
+
+# Outputs a version of a file that has no blank lines.
+#   noblanklines [filename]
+alias noblanklines='grep -v "^[[:space:]]*$"'
 
 
 # Push the current directory
@@ -30,6 +24,21 @@ pullit () {
   git pull origin `git branch | grep \* | sed 's/\* //'`
 }
 
+svnaddall () {
+  svn status | grep -v "^.[ \t]*\..*" | grep "^?" | awk '{print $2}' | xargs svn add
+}
+
+# makes the connection to jkahn.local:8888 really slow.
+function  goslow () {
+  ipfw pipe 1 config bw 4KByte/s
+  ipfw add pipe 1 tcp from any to me 8888
+}
+
+# makes the connection to jkahn.local:8888 fast again
+gofast () {
+  ipfw flush
+}
+
 # For all files in the current directory, convert tabs to 2 spaces.
 tabs_to_spaces_all () {
   for FILE in ./*; do expand -t 2 $FILE > /tmp/spaces && mv /tmp/spaces $FILE ; done;
@@ -40,10 +49,21 @@ kill_swps () {
   find ./ -name "*.swo" -exec echo "Deleting: " {} \; -exec rm {} \;
 }
 
-syncandpushpages () {
-  git checkout gh-pages
-  git merge master
-  git push origin gh-pages
+clean_dir () {
+  echo "Are you really really sure?  The current directory is: "
+  pwd
+  read -e INPUT
+
+  # This is ugly.  Why is this ugly.
+  if [[ $INPUT == "y" || $INPUT == "Y" || $INPUT  == "yes" ]]; then
+    echo "Removing .svn, .DS_, and ._* files... "
+    find . -iname ".svn*" | xargs rm -Rv
+    find . -iname ".DS_*" | xargs rm -Rv
+    find . -iname "._*" | xargs rm -Rv
+    echo "All done!"
+  else
+    echo "Cleaning of the directory was canceled."
+  fi
 }
 
 new_project () {
