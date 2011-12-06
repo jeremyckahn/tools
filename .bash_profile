@@ -1,4 +1,8 @@
+# http://www.ibm.com/developerworks/linux/library/l-tip-prompt/
+# Modified a bit.  Also: http://beckism.com/2009/02/better_bash_prompt/
+export PS1="\[\e[36;1m\][\u]\[\e[32;1m\][\W]: \[\e[0m\]"
 export PATH=$HOME/node/out/Release/:$PATH
+
 alias ll="ls -lah"
 alias gs='git status'
 alias gd='git diff'
@@ -9,9 +13,7 @@ alias v='vim'
 alias s='cd ~/Sites'
 alias t='cd ~/tools'
 
-# http://www.ibm.com/developerworks/linux/library/l-tip-prompt/
-# Modified a bit.  Also: http://beckism.com/2009/02/better_bash_prompt/
-export PS1="\[\e[36;1m\][\u]\[\e[32;1m\][\W]: \[\e[0m\]"
+source ~/tools/misc/git-completion.bash
 
 # Outputs a version of a file that has no blank lines.
 #   noblanklines [filename]
