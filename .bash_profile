@@ -1,6 +1,6 @@
 # http://www.ibm.com/developerworks/linux/library/l-tip-prompt/
 # Modified a bit.  Also: http://beckism.com/2009/02/better_bash_prompt/
-export PS1="\[\e[36;1m\][\u]\[\e[32;1m\][\W]: \[\e[0m\]"
+#export PS1="\[\e[36;1m\][\u]\[\e[32;1m\][\W]: \[\e[0m\]"
 export PATH=$HOME/node/out/Release/:$PATH
 
 alias ll="ls -lah"
@@ -87,3 +87,39 @@ function resource () {
   source ~/.bash_profile
   source ~/.bashrc
 }
+
+#Some craziness...
+# Colors for the command prompt
+__BLUE="\[\033[0;34m\]"
+__GREEN="\[\033[0;32m\]"
+__LIGHT_BLUE="\[\033[1;34m\]"
+__LIGHT_GRAY="\[\033[0;37m\]"
+__LIGHT_GREEN="\[\033[1;32m\]"
+__LIGHT_RED="\[\033[1;31m\]"
+__PLAIN="\[\033[0;0m\]"
+__RED="\[\033[0;31m\]"
+__WHITE="\[\033[1;37m\]"
+
+# Return a color that should be used for the git branch
+# depending on the current git status
+function __git_prompt_color() {
+  local STATUS="$(git status --porcelain 2>/dev/null)"
+  if [ -n "$STATUS" ]; then
+    echo $__LIGHT_RED
+  else
+    echo $__LIGHT_GREEN
+  fi
+}
+
+# Build a custom command prompt
+function __prompt_cmd() {
+  PS1="$__LIGHT_GRAY[\h]$__LIGHT_BLUE[\W]$(__git_prompt_color)$(__git_ps1 "[%s]")$__PLAIN $ "
+}
+
+export PROMPT_COMMAND=__prompt_cmd
+
+# Setup some of the git command prompt display stuff
+export GIT_PS1_SHOWDIRTYSTATE=1
+export GIT_PS1_SHOWSTASHSTATE=1
+export GIT_PS1_SHOWUNTRACKEDFILE=1
+export GIT_PS1_SHOWUPSTREAM="auto"
