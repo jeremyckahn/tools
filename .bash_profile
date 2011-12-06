@@ -9,8 +9,9 @@ alias v='vim'
 alias s='cd ~/Sites'
 alias t='cd ~/tools'
 
-# http://osxdaily.com/2006/12/11/how-to-customize-your-terminal-prompt/
-export PS1="[\u][\W]: "
+# http://www.ibm.com/developerworks/linux/library/l-tip-prompt/
+# Modified a bit.  Also: http://beckism.com/2009/02/better_bash_prompt/
+export PS1="\[\e[36;1m\][\u]\[\e[32;1m\][\W]: \[\e[0m\]"
 
 # Outputs a version of a file that has no blank lines.
 #   noblanklines [filename]
