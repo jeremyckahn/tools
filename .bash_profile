@@ -19,41 +19,41 @@ alias noblanklines='grep -v "^[[:space:]]*$"'
 
 
 # Push the current directory
-pushit () {
+function pushit () {
   git push origin `git branch | grep \* | sed 's/\* //'`
 }
 
 # Pull the current directory
-pullit () {
+function pullit () {
   git pull origin `git branch | grep \* | sed 's/\* //'`
 }
 
-svnaddall () {
+function svnaddall () {
   svn status | grep -v "^.[ \t]*\..*" | grep "^?" | awk '{print $2}' | xargs svn add
 }
 
 # makes the connection to jkahn.local:8888 really slow.
-function  goslow () {
+function goslow () {
   ipfw pipe 1 config bw 4KByte/s
   ipfw add pipe 1 tcp from any to me 8888
 }
 
 # makes the connection to jkahn.local:8888 fast again
-gofast () {
+function gofast () {
   ipfw flush
 }
 
 # For all files in the current directory, convert tabs to 2 spaces.
-tabs_to_spaces_all () {
+function tabs_to_spaces_all () {
   for FILE in ./*; do expand -t 2 $FILE > /tmp/spaces && mv /tmp/spaces $FILE ; done;
 }
 
-kill_swps () {
+function kill_swps () {
   find ./ -name "*.swp" -exec echo "Deleting: " {} \; -exec rm {} \;
   find ./ -name "*.swo" -exec echo "Deleting: " {} \; -exec rm {} \;
 }
 
-clean_dir () {
+function clean_dir () {
   echo "Are you really really sure?  The current directory is: "
   pwd
   read -e INPUT
@@ -70,7 +70,7 @@ clean_dir () {
   fi
 }
 
-new_project () {
+function new_project () {
   mkdir src/;
   mkdir lib/;
   touch README.md;
@@ -81,7 +81,7 @@ new_project () {
   git status;
 }
 
-resource () {
+function resource () {
   source ~/.bash_profile
   source ~/.bashrc
 }
