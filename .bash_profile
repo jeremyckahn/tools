@@ -9,6 +9,9 @@ alias v='vim'
 alias s='cd ~/Sites'
 alias t='cd ~/tools'
 
+# http://osxdaily.com/2006/12/11/how-to-customize-your-terminal-prompt/
+export PS1="[\u][\W]: "
+
 # Outputs a version of a file that has no blank lines.
 #   noblanklines [filename]
 alias noblanklines='grep -v "^[[:space:]]*$"'
