@@ -18,6 +18,7 @@ alias gc='git checkout'
 alias v='vim'
 alias s='cd ~/Sites'
 alias t='cd ~/tools'
+alias o='open ./'
 
 
 # Push the current directory
