@@ -18,6 +18,9 @@ alias gc='git checkout'
 alias v='vim'
 alias s='cd ~/Sites'
 alias t='cd ~/tools'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
 
 
 # Push the current directory
