@@ -12,10 +12,6 @@ cnoreabbr nt NERDTree
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
-"colorscheme darkblue
-"call pathogen#infect('~/tools/vim/bundle')
-
-
 let mapleader = ","
 
 nmap <leader>vs :split<CR>
@@ -30,45 +26,52 @@ nmap <leader>s :set noautoindent<CR>
 nmap <leader>d :set wrap<CR>
 nmap <leader>f :set nowrap<CR>
 
-" Folding stuff """""""""""""""""""""""""""""" 
-set foldmethod=indent " use the syntax file to create folds
+" Folding stuff """"""""""""""""""""""""""""""
+"set foldmethod=indent " use the syntax file to create folds
 
 " Set a nicer foldtext function via http://vim.wikia.com/wiki/Customize_text_for_closed_folds
-set foldtext=MyFoldText()
-function! MyFoldText()
-  let line = getline(v:foldstart)
-  if match( line, '^[ \t]*\(\/\*\|\/\/\)[*/\\]*[ \t]*$' ) == 0
-    let initial = substitute( line, '^\([ \t]\)*\(\/\*\|\/\/\)\(.*\)', '\1\2', '' )
-    let linenum = v:foldstart + 1
-    while linenum < v:foldend
-      let line = getline( linenum )
-      let comment_content = substitute( line, '^\([ \t\/\*]*\)\(.*\)$', '\2', 'g' )
-      if comment_content != ''
-        break
-      endif
-      let linenum = linenum + 1
-    endwhile
-    let sub = initial . ' ' . comment_content
-  else
-    let sub = line
-    let startbrace = substitute( line, '^.*{[ \t]*$', '{', 'g')
-    if startbrace == '{'
-      let line = getline(v:foldend)
-      let endbrace = substitute( line, '^[ \t]*}\(.*\)$', '}', 'g')
-      if endbrace == '}'
-        let sub = sub.substitute( line, '^[ \t]*}\(.*\)$', '...}\1', 'g')
-      endif
-    endif
-  endif
-  let n = v:foldend - v:foldstart + 1
-  let info = " " . n . " lines"
-  let sub = sub . "                                                                                                                  "
-  let num_w = getwinvar( 0, '&number' ) * getwinvar( 0, '&numberwidth' )
-  let fold_w = getwinvar( 0, '&foldcolumn' )
-  let sub = strpart( sub, 0, winwidth(0) - strlen( info ) - num_w - fold_w - 1 )
-  return sub . info
-endfunction
+"set foldtext=MyFoldText()
+"function! MyFoldText()
+"  let line = getline(v:foldstart)
+"  if match( line, '^[ \t]*\(\/\*\|\/\/\)[*/\\]*[ \t]*$' ) == 0
+"    let initial = substitute( line, '^\([ \t]\)*\(\/\*\|\/\/\)\(.*\)', '\1\2', '' )
+"    let linenum = v:foldstart + 1
+"    while linenum < v:foldend
+"      let line = getline( linenum )
+"      let comment_content = substitute( line, '^\([ \t\/\*]*\)\(.*\)$', '\2', 'g' )
+"      if comment_content != ''
+"        break
+"      endif
+"      let linenum = linenum + 1
+"    endwhile
+"    let sub = initial . ' ' . comment_content
+"  else
+"    let sub = line
+"    let startbrace = substitute( line, '^.*{[ \t]*$', '{', 'g')
+"    if startbrace == '{'
+"      let line = getline(v:foldend)
+"      let endbrace = substitute( line, '^[ \t]*}\(.*\)$', '}', 'g')
+"      if endbrace == '}'
+"        let sub = sub.substitute( line, '^[ \t]*}\(.*\)$', '...}\1', 'g')
+"      endif
+"    endif
+"  endif
+"  let n = v:foldend - v:foldstart + 1
+"  let info = " " . n . " lines"
+"  let sub = sub . "                                                                                                                  "
+"  let num_w = getwinvar( 0, '&number' ) * getwinvar( 0, '&numberwidth' )
+"  let fold_w = getwinvar( 0, '&foldcolumn' )
+"  let sub = strpart( sub, 0, winwidth(0) - strlen( info ) - num_w - fold_w - 1 )
+"  return sub . info
+"endfunction
 """"""""""""""""""""""""""""""""""""""""""""""
+
+ autocmd BufWritePre * :%s/\s\+$//e
+"|             |                  | |
+"|             |                  | This part actually removes the whitespace
+"|             |                  The command will run for all file types
+"|             This command will run immediately after you save a file
+"Creates a new autocommand
 
 if has('mouse')
   set mouse=a
