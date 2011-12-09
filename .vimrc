@@ -9,8 +9,10 @@ set shiftwidth=2
 set softtabstop=2
 cnoreabbr nt NERDTree
 
+runtime ~/tools/vim/plugins/vim-pathogen/autoload/pathogen.vim
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
+call pathogen#infect('~/tools/vim/plugins')
 
 let mapleader = ","
 
@@ -81,10 +83,6 @@ endif
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
-" This `let` is needed for closetag.vim.  It is.  Don't move it.
-let g:closetag_html_style=1
-source ~/tools/vim/bundle/closetag.vim
-
 " show hidden whitespace
 set list listchars=tab:⇾\ ,trail:⇁
 
@@ -111,3 +109,4 @@ if has("gui_running")
 endif
 
 :set backspace=indent,eol,start
+
