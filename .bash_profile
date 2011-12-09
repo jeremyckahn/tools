@@ -54,9 +54,10 @@ function tabs_to_spaces_all () {
   for FILE in ./*; do expand -t 2 $FILE > /tmp/spaces && mv /tmp/spaces $FILE ; done;
 }
 
-function kill_swps () {
+function kill_vim_junk () {
   find ./ -name "*.swp" -exec echo "Deleting: " {} \; -exec rm {} \;
   find ./ -name "*.swo" -exec echo "Deleting: " {} \; -exec rm {} \;
+  find ./ -name ".netrwhist" -exec echo "Deleting: " {} \; -exec rm {} \;
 }
 
 function clean_dir () {
