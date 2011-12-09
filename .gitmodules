@@ -1,6 +1,3 @@
-[submodule "iTerm-2-Color-Themes"]
-	path = iTerm-2-Color-Themes
-	url = https://github.com/baskerville/iTerm-2-Color-Themes.git
 [submodule "vim/plugins/nerdtree"]
 	path = vim/plugins/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
