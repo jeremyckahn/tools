@@ -17,7 +17,9 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
-source ~/tools/misc/git-completion.bash
+TOOLS=~/tools
+
+source $TOOLS/misc/git-completion.bash
 
 # Outputs a version of a file that has no blank lines.
 #   noblanklines [filename]
@@ -88,9 +90,23 @@ function new_project () {
   git status;
 }
 
+
+function update_tools () {
+  cd $TOOLS;
+  git pull origin master;
+  git submodule init;
+  git submodule update;
+  resource;
+  cd -;
+}
+
 function resource () {
-  source ~/.bash_profile
-  source ~/.bashrc
+  if [ -f ~/.bash_profile ]; then
+    source ~/.bash_profile
+  fi
+  if [ -f ~/.bashrc ]; then
+    source ~/.bashrc
+  fi
 }
 
 #Some craziness...
