@@ -18,17 +18,12 @@ let g:ctrlp_working_path_mode = 0
 
 let mapleader = ","
 
-nmap <leader>vs :split<CR>
-nmap <leader>sp :vsplit<CR>
 nmap <leader>q :tabnew<CR>
 nmap <leader>e :tabn<CR>
 nmap <leader>w :tabp<CR>
 nmap <leader>r :tabc<CR>
 nmap <leader>n :NERDTreeToggle<CR>
-nmap <leader>a :set autoindent<CR>
-nmap <leader>s :set noautoindent<CR>
-nmap <leader>d :set wrap<CR>
-nmap <leader>f :set nowrap<CR>
+nmap <leader>d :w !diff % -<CR>
 
 " Folding stuff """"""""""""""""""""""""""""""
 "set foldmethod=indent " use the syntax file to create folds
