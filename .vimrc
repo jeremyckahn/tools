@@ -13,7 +13,7 @@ source ~/tools/vim/bundle/vim-pathogen/autoload/pathogen.vim
 runtime ~/tools/vim/bundle/vim-pathogen/autoload/
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
-call pathogen#infect('~/tools/vim/plugins')
+call pathogen#infect('~/tools/vim/bundle')
 let g:ctrlp_working_path_mode = 0
 
 let mapleader = ","
