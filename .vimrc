@@ -9,8 +9,8 @@ set shiftwidth=2
 set softtabstop=2
 cnoreabbr nt NERDTree
 
-source ~/tools/vim/plugins/vim-pathogen/autoload/pathogen.vim
-runtime ~/tools/vim/plugins/vim-pathogen/autoload/
+source ~/tools/vim/bundle/vim-pathogen/autoload/pathogen.vim
+runtime ~/tools/vim/bundle/vim-pathogen/autoload/
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 call pathogen#infect('~/tools/vim/plugins')
