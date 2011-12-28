@@ -20,6 +20,9 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias sass_watch='sass --watch style.scss:style.css'
 
+# Stolen from: https://gist.github.com/1525217
+alias server='open http://localhost:8000 && python -m SimpleHTTPServer'
+
 TOOLS=~/tools
 
 source $TOOLS/misc/git-completion.bash
