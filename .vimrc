@@ -12,6 +12,7 @@ cnoreabbr nt NERDTree
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 let g:ctrlp_working_path_mode = 0
+let g:ctrlp_regexp_search = 1
 
 let mapleader = ","
 
