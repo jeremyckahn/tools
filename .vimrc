@@ -105,3 +105,13 @@ endif
 
 :set backspace=indent,eol,start
 
+" --- command completion ---
+set wildmenu                " Hitting TAB in command mode will
+set wildchar=<TAB>          "   show possible completions.
+set wildmode=list:longest
+set wildignore+=*.DS_STORE,*.db
+
+
+" --- remove sounds effects ---
+set noerrorbells
+set visualbell
