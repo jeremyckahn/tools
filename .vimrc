@@ -123,3 +123,10 @@ set wildignore+=*.DS_STORE,*.db
 " --- remove sounds effects ---
 set noerrorbells
 set visualbell
+
+
+" --- backup and swap files ---
+" I save all the time, those are annoying and unnecessary...
+set nobackup
+set nowritebackup
+set noswapfile
