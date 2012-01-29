@@ -22,3 +22,6 @@
 [submodule ".vim/bundle/Auto-Pairs"]
 	path = .vim/bundle/Auto-Pairs
 	url = https://github.com/vim-scripts/Auto-Pairs.git
+[submodule ".vim/bundle/vim-matchit"]
+	path = .vim/bundle/vim-matchit
+	url = https://github.com/tsaleh/vim-matchit.git
