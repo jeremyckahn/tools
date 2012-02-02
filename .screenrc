@@ -3,6 +3,9 @@
 # We are hardcore, and don't want no silly X windows popping up.
 #unsetenv DISPLAY
 
+# Advertise 256 color support to inner applications. bce stands for "background color erase". Google it.
+term screen-256color-bce
+
 #
 # Example of a user's .screenrc file
 #
