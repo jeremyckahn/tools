@@ -94,5 +94,5 @@ set noswapfile
 set pastetoggle=<F2>
 
 if &t_Co >= 256 || has("gui_running")
-   colorscheme darkZ
+   colorscheme desertEx
 endif
