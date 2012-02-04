@@ -130,3 +130,9 @@ set visualbell
 set nobackup
 set nowritebackup
 set noswapfile
+
+set pastetoggle=<F2>
+
+if &t_Co >= 256 || has("gui_running")
+   colorscheme summerfruit256
+endif
