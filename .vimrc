@@ -38,9 +38,9 @@ nmap <leader>d :w !diff % -<CR>
 "|             This command will run immediately after you save a file
 "Creates a new autocommand
 
-"if has('mouse')
-  "set mouse=a
-"endif
+if has('mouse')
+  set mouse=a
+endif
 
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
