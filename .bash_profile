@@ -2,6 +2,8 @@
 # Modified a bit.  Also: http://beckism.com/2009/02/better_bash_prompt/
 #export PS1="\[\e[36;1m\][\u]\[\e[32;1m\][\W]: \[\e[0m\]"
 export PATH=$HOME/node/out/Release/:$PATH
+export PYTHONSTARTUP=$HOME/tools/.pythonstartup
+export EDITOR=vim
 
 alias ll="ls -lah"
 alias gs='git status'
@@ -12,7 +14,7 @@ alias gc='git checkout'
 alias gf='git fetch'
 alias cpoint='git commit -am "Checkpoint."'
 alias v='vim'
-alias vo='vim -o'
+alias vr='vim -R'
 alias s='cd ~/Sites'
 alias l='cd ~/Sites/lib'
 alias e='cd ~/Sites/ext'
