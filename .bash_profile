@@ -3,6 +3,7 @@
 #export PS1="\[\e[36;1m\][\u]\[\e[32;1m\][\W]: \[\e[0m\]"
 export PATH=$HOME/node/out/Release/:$PATH
 export PYTHONSTARTUP=$HOME/tools/.pythonstartup
+export EDITOR=vim
 
 alias ll="ls -lah"
 alias gs='git status'
