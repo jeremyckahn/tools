@@ -49,12 +49,9 @@ set nocompatible
 " show hidden whitespace
 set list listchars=tab:⇾\ ,trail:⇁
 
-set colorcolumn=80
-" column gutter
-"set cc=81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100
+let javaScript_fold=2
 
-hi ColorColumn ctermbg=darkblue guibg=lightgrey
-"highlight Comment ctermfg=darkgreen
+set colorcolumn=80
 
 set hidden
 
@@ -96,3 +93,7 @@ set pastetoggle=<F2>
 if &t_Co >= 256 || has("gui_running")
    colorscheme desertEx
 endif
+
+hi ColorColumn ctermbg=Black
+" column gutter
+set cc=81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100
