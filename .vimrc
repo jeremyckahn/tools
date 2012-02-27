@@ -7,7 +7,6 @@ set autoindent
 set expandtab
 set shiftwidth=2
 set softtabstop=2
-cnoreabbr nt NERDTree
 
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
@@ -49,10 +48,9 @@ set nocompatible
 " show hidden whitespace
 set list listchars=tab:⇾\ ,trail:⇁
 
-let javaScript_fold=2
-
 set colorcolumn=80
 
+" allow buffer switching without saving
 set hidden
 
 " Gui stuff
@@ -97,3 +95,18 @@ endif
 hi ColorColumn ctermbg=Black
 " column gutter
 set cc=81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100
+" Allow cursor movements during insert mode
+inoremap <C-h> <C-o>h
+inoremap <C-j> <C-o>j
+inoremap <C-k> <C-o>k
+inoremap <C-l> <C-o>l
+inoremap <C-d> <end>
+
+" hitting jj will jump out of insert mode
+inoremap jj <esc>
+
+" quick vertical split
+noremap <leader>v :vsp<CR>
+
+" Quickly get rid of highlighting
+noremap <leader>h :noh<CR>
