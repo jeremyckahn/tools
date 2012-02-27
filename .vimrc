@@ -53,6 +53,9 @@ set colorcolumn=80
 " allow buffer switching without saving
 set hidden
 
+"Case insensitive search.
+set ic
+
 " Gui stuff
 if has("gui_running")
   set lines=150 columns=230 " Maximize gvim window.
