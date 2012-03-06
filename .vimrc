@@ -113,3 +113,11 @@ noremap <leader>v :vsp<CR>
 
 " Quickly get rid of highlighting
 noremap <leader>h :noh<CR>
+
+" Make j and k work normally for soft wrapped lines
+noremap <buffer> j gj
+noremap <buffer> k gk
+
+" Make the arrow keys work like TextMate in insert mode
+inoremap <down> <C-C>gja
+inoremap <up> <C-C>gka
