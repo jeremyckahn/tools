@@ -237,7 +237,7 @@ call <SID>X("Comment","7ccd7c","","italic")
 call <SID>X("Conditional","ffa54f","","none")
 call <SID>X("Constant","fa8072","","none")
 call <SID>X("Cursor","000000","ffff00","none")
-call <SID>X("CursorColumn","e2e4e5","","none")
+call <SID>X("CursorColumn","000000","","none")
 call <SID>X("CursorLine","e2e4e5","","none")
 call <SID>X("Debug","76eec6","","none")
 call <SID>X("Define","ee799f","","none")
@@ -331,3 +331,4 @@ delf <SID>grey_number
 " }}}
 
 
+hi ColorColumn ctermbg=Black
