@@ -121,3 +121,6 @@ noremap <buffer> k gk
 " Make the arrow keys work like TextMate in insert mode
 inoremap <down> <C-C>gja
 inoremap <up> <C-C>gka
+
+" https://github.com/mileszs/ack.vim
+let g:ackprg="ack-grep -H --nocolor --nogroup --column"
