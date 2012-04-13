@@ -23,12 +23,11 @@ filetype plugin indent on
 
 let mapleader = ","
 
-nmap <leader>q :tabnew<CR>
-nmap <leader>e :tabn<CR>
-nmap <leader>w :tabp<CR>
-nmap <leader>r :tabc<CR>
-nmap <leader>n :NERDTreeToggle<CR>
-nmap <leader>d :w !diff % -<CR>
+nmap qq :tabnew<CR>
+nmap ww :tabp<CR>
+nmap ee :tabn<CR>
+nmap nn :NERDTreeToggle<Enter>
+nmap <leader>DD :w !diff % -<CR>
 
  autocmd BufWritePre * :%s/\s\+$//e
 "|             |                  | |
@@ -127,3 +126,6 @@ let g:ackprg="ack -H --nocolor --nogroup --column"
 
 " Ack for the current word
 noremap <leader>a :Ack <c-r>=expand("<cword>")<CR><CR>
+
+" Fix Vim's ridiculous line wrapping model
+set ww=<,>,[,]
