@@ -23,11 +23,11 @@ filetype plugin indent on
 
 let mapleader = ","
 
-nmap qq :tabnew<CR>
-nmap ww :tabp<CR>
-nmap ee :tabn<CR>
-nmap nn :NERDTreeToggle<Enter>
-nmap <leader>DD :w !diff % -<CR>
+nmap <leader>q :tabnew<CR>
+nmap <leader>w :tabp<CR>
+nmap <leader>e :tabn<CR>
+nmap <leader>n :NERDTreeToggle<Enter>
+nmap <leader>d :w !diff % -<CR>
 
  autocmd BufWritePre * :%s/\s\+$//e
 "|             |                  | |
@@ -43,9 +43,6 @@ endif
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
-
-" show hidden whitespace
-set list listchars=tab:⇾\ ,trail:⇁
 
 set colorcolumn=80
 
@@ -95,6 +92,14 @@ if &t_Co >= 256 || has("gui_running")
 endif
 
 hi ColorColumn ctermbg=Black
+
+" show hidden whitespace
+highlight ExtraWhitespace ctermbg=red guibg=red
+au ColorScheme * highlight ExtraWhitespace guibg=red
+au BufEnter * match ExtraWhitespace /\s\+$/
+au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+au InsertLeave * match ExtraWhiteSpace /\s\+$/
+
 " column gutter
 set cc=81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100
 " Allow cursor movements during insert mode
