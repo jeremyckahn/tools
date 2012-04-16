@@ -26,6 +26,7 @@ let mapleader = ","
 nmap <leader>q :tabnew<CR>
 nmap <leader>w :tabp<CR>
 nmap <leader>e :tabn<CR>
+nmap <leader>r :tabc<CR>
 nmap <leader>n :NERDTreeToggle<Enter>
 nmap <leader>d :w !diff % -<CR>
 
