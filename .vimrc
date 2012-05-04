@@ -101,8 +101,6 @@ au BufEnter * match ExtraWhitespace /\s\+$/
 au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 au InsertLeave * match ExtraWhiteSpace /\s\+$/
 
-" column gutter
-set cc=81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100
 " Allow cursor movements during insert mode
 inoremap <C-h> <C-o>h
 inoremap <C-j> <C-o>j
@@ -135,5 +133,6 @@ noremap <leader>a :Ack <c-r>=expand("<cword>")<CR><CR>
 
 " Fix Vim's ridiculous line wrapping model
 set ww=<,>,[,]
-
 set autoread
+
+exec 'set colorcolumn=' . join(range(80, 500), ',')
