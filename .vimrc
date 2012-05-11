@@ -135,6 +135,3 @@ noremap <leader>a :Ack <c-r>=expand("<cword>")<CR><CR>
 set ww=<,>,[,]
 
 exec 'set colorcolumn=' . join(range(80, 500), ',')
-
-" Open quickfix items in a new tab
-set switchbuf+=newtab
