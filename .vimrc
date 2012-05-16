@@ -136,6 +136,5 @@ noremap <leader>a :Ack <c-r>=expand("<cword>")<CR><CR>
 
 " Fix Vim's ridiculous line wrapping model
 set ww=<,>,[,]
-set autoread
 
 exec 'set colorcolumn=' . join(range(80, 500), ',')
