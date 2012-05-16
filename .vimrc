@@ -16,17 +16,20 @@ let g:ctrlp_regexp_search = 1
 
 
 " Enable file type detection.
-" Use the default filetype settings, so that mail gets 'tw' set to 72,
-" 'cindent' is on in C files, etc.
 " Also load indent files, to automatically do language-dependent indenting.
 filetype plugin indent on
 
 let mapleader = ","
 
 nmap <leader>q :tabnew<CR>
-nmap <leader>w :tabp<CR>
-nmap <leader>e :tabn<CR>
-nmap <leader>r :tabc<CR>
+nmap <leader>w :tabc<CR>
+
+" Move to the next tab right with the right arrow key
+noremap <C-right> :tabn<CR>
+
+" Move to the next tab left with the left arrow key
+noremap <C-left> :tabp<CR>
+
 nmap <leader>n :NERDTreeToggle<Enter>
 nmap <leader>d :w !diff % -<CR>
 
