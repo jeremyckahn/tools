@@ -16,17 +16,11 @@ let g:ctrlp_regexp_search = 1
 
 
 " Enable file type detection.
-" Use the default filetype settings, so that mail gets 'tw' set to 72,
-" 'cindent' is on in C files, etc.
 " Also load indent files, to automatically do language-dependent indenting.
 filetype plugin indent on
 
 let mapleader = ","
 
-nmap <leader>q :tabnew<CR>
-nmap <leader>w :tabp<CR>
-nmap <leader>e :tabn<CR>
-nmap <leader>r :tabc<CR>
 nmap <leader>n :NERDTreeToggle<Enter>
 nmap <leader>d :w !diff % -<CR>
 
@@ -132,6 +126,11 @@ let g:ackprg="ack -H --nocolor --nogroup --column"
 
 " Ack for the current word
 noremap <leader>a :Ack <c-r>=expand("<cword>")<CR><CR>
+
+nmap <leader>q :tabnew<CR>
+nmap <leader>w :tabp<CR>
+nmap <leader>e :tabn<CR>
+nmap <leader>r :tabc<CR>
 
 " Fix Vim's ridiculous line wrapping model
 set ww=<,>,[,]
