@@ -88,11 +88,13 @@ set noswapfile
 
 set pastetoggle=<F2>
 
-if &t_Co >= 256 || has("gui_running")
-   colorscheme desertEx
-endif
+"if &t_Co >= 256 || has("gui_running")
+   "colorscheme desertEx
+"endif
 
-hi ColorColumn ctermbg=Black
+" http://vim.wikia.com/wiki/Xterm256_color_names_for_console_Vim
+hi x233_Grey7 ctermfg=233 guifg=#121212
+hi ColorColumn ctermbg=233_Grey7
 
 " show hidden whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
