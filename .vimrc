@@ -86,6 +86,8 @@ set pastetoggle=<F2>
    "colorscheme desertEx
 "endif
 
+set t_Co=256
+
 " http://vim.wikia.com/wiki/Xterm256_color_names_for_console_Vim
 hi x233_Grey7 ctermfg=233 guifg=#121212
 hi ColorColumn ctermbg=233_Grey7
