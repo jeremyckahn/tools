@@ -126,9 +126,6 @@ inoremap <up> <C-C>gka
 " https://github.com/mileszs/ack.vim
 let g:ackprg="ack -H --nocolor --nogroup --column"
 
-" Ack for the current word
-noremap <leader>a :Ack <c-r>=expand("<cword>")<CR><CR>
-
 nmap <leader>q :tabnew<CR>
 nmap <leader>w :tabp<CR>
 nmap <leader>e :tabn<CR>
