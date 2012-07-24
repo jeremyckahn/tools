@@ -25,6 +25,7 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias sass_watch='sass --watch style.scss:style.css'
 alias tmux="tmux -2"
+alias rpi='qemu-system-arm -M versatilepb -cpu arm1176 -m 256 -hda rootfs.ext2 -kernel zImage -append "root=/dev/sda" -serial stdio'
 
 # Stolen from: https://gist.github.com/1525217
 alias server='open http://localhost:8000 && python -m SimpleHTTPServer'
