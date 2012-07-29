@@ -25,7 +25,6 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias sass_watch='sass --watch style.scss:style.css'
 alias tmux="tmux -2"
-alias rpi='qemu-system-arm -M versatilepb -cpu arm1176 -m 256 -hda rootfs.ext2 -kernel zImage -append "root=/dev/sda" -serial stdio'
 
 # Stolen from: https://gist.github.com/1525217
 alias server='open http://localhost:8000 && python -m SimpleHTTPServer'
@@ -147,7 +146,8 @@ function __git_prompt_color() {
 
 # Build a custom command prompt
 function __prompt_cmd() {
-  PS1="$__LIGHT_GRAY[\h]$__LIGHT_BLUE[\W]$(__git_prompt_color)$(__git_ps1 "[%s]")$__PLAIN $ "
+  #PS1="$__LIGHT_GRAY[\h]$__LIGHT_BLUE[\W]$(__git_prompt_color)$(__git_ps1 "[%s]")$__PLAIN $ "
+  PS1="$__LIGHT_GRAY[\h]$__LIGHT_BLUE[\W]$__PLAIN "
 }
 
 export PROMPT_COMMAND=__prompt_cmd
@@ -161,3 +161,16 @@ export GIT_PS1_SHOWUPSTREAM="auto"
 TERM=xterm-256color
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+
+## Raspberry Pi stuff.
+# http://superpiadventures.com/2012/07/development-environment/
+function rpi_mnt {
+  sudo mount -t proc proc ~/rpi/chroot-raspbian-armhf/proc
+  sudo mount -t sysfs sysfs ~/rpi/chroot-raspbian-armhf/sys
+  sudo mount -o bind /dev ~/rpi/chroot-raspbian-armhf/dev
+}
+alias rpi_chroot='sudo LC_ALL=C chroot ~/rpi/chroot-raspbian-armhf'
+
+
+alias rpi_start='qemu-system-arm -M versatilepb -cpu arm1176 -m 256 -hda rootfs.ext2 -kernel zImage -append "root=/dev/sda" -serial stdio'
