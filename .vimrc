@@ -135,3 +135,7 @@ nmap <leader>r :tabc<CR>
 set ww=<,>,[,]
 
 exec 'set colorcolumn=' . join(range(80, 500), ',')
+
+" Autowrap at 80 characters.
+set fo+=t
+set wrapmargin=80
