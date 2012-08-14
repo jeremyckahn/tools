@@ -13,6 +13,7 @@ call pathogen#helptags()
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_by_filename = 1
 let g:ctrlp_regexp_search = 1
+let g:ctrlp_use_caching = 1
 
 
 " Enable file type detection.
@@ -137,5 +138,5 @@ set ww=<,>,[,]
 exec 'set colorcolumn=' . join(range(80, 500), ',')
 
 " Autowrap at 80 characters.
-set fo+=t
-set wrapmargin=80
+"set fo+=t
+"set wrapmargin=80
