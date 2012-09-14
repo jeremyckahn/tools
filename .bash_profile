@@ -48,6 +48,11 @@ function pullit () {
   git pull origin `git branch | grep \* | sed 's/\* //'`
 }
 
+# Find and replace all files recursively in the current directory.
+function findandreplace () {
+  grep -rl $1 ./ | xargs sed -i s/$1/$2/
+}
+
 function svnaddall () {
   svn status | grep -v "^.[ \t]*\..*" | grep "^?" | awk '{print $2}' | xargs svn add
 }
