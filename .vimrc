@@ -127,10 +127,6 @@ inoremap <up> <C-C>gka
 " https://github.com/mileszs/ack.vim
 let g:ackprg="ack -H --nocolor --nogroup --column"
 
-nmap <leader>q :tabnew<CR>
-nmap <leader>w :tabp<CR>
-nmap <leader>e :tabn<CR>
-nmap <leader>r :tabc<CR>
 
 " Fix Vim's ridiculous line wrapping model
 set ww=<,>,[,],h,l
@@ -140,3 +136,8 @@ exec 'set colorcolumn=' . join(range(80, 500), ',')
 " Autowrap at 80 characters.
 "set fo+=t
 "set wrapmargin=80
+
+noremap <F9> :tabp<CR>
+noremap <F10> :tabn<CR>
+noremap <F11> :tabnew<CR>
+noremap <F12> :tabc<CR>
