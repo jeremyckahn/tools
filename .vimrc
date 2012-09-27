@@ -133,7 +133,7 @@ nmap <leader>e :tabn<CR>
 nmap <leader>r :tabc<CR>
 
 " Fix Vim's ridiculous line wrapping model
-set ww=<,>,[,]
+set ww=<,>,[,],h,l
 
 exec 'set colorcolumn=' . join(range(80, 500), ',')
 
