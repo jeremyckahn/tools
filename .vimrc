@@ -133,9 +133,7 @@ set ww=<,>,[,],h,l
 
 exec 'set colorcolumn=' . join(range(80, 500), ',')
 
-" Autowrap at 80 characters.
-"set fo+=t
-"set wrapmargin=80
+set tw=79
 
 noremap <F9> :tabp<CR>
 noremap <F10> :tabn<CR>
