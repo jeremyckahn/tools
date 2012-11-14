@@ -23,6 +23,8 @@ filetype plugin indent on
 let mapleader = ","
 
 nmap <leader>n :NERDTreeToggle<Enter>
+nmap <leader>N :LustyFilesystemExplorer<Enter>
+nmap <leader>/ :LustyBufferGrep<Enter>
 nmap <leader>d :w !diff % -<CR>
 
  autocmd BufWritePre * :%s/\s\+$//e
