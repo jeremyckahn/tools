@@ -137,7 +137,7 @@ exec 'set colorcolumn=' . join(range(80, 500), ',')
 
 set tw=79
 
-noremap <F9> :tabp<CR>
-noremap <F10> :tabn<CR>
-noremap <F11> :tabnew<CR>
-noremap <F12> :tabc<CR>
+noremap <F5> :tabp<CR>
+noremap <F6> :tabn<CR>
+noremap <F7> :tabnew<CR>
+noremap <F8> :tabc<CR>
