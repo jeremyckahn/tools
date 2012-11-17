@@ -1,11 +1,1 @@
-Make sure this directory is in your user's home directory. (~/)
-
-Make sure it is called "Tools." (~/Tools)
-
-Make sure you copy the .bash_profile file directly into you user's root directory (~/.bash_profile)
-
-Make sure to copy the .vimrc file directly into your user's root directory (~/.vimrc)
-
-Make sure you start a new terminal session to see the new commands.
-
-Make sure you enjoy.  :)
+These are some tools that I use every day.
