@@ -28,6 +28,10 @@ nmap <leader>N :LustyFilesystemExplorer<Enter>
 nmap <leader>/ :LustyBufferGrep<Enter>
 nmap <leader>d :w !diff % -<CR>
 
+" Enable or disable auto width-formatting.
+noremap <leader>f :set tw=0<Enter>
+noremap <leader>F :set tw=79<Enter>
+
  autocmd BufWritePre * :%s/\s\+$//e
 "|             |                  | |
 "|             |                  | This part actually removes the whitespace
@@ -86,10 +90,6 @@ set noswapfile
 
 set pastetoggle=<F2>
 
-"if &t_Co >= 256 || has("gui_running")
-   "colorscheme desertEx
-"endif
-
 set t_Co=256
 
 " http://vim.wikia.com/wiki/Xterm256_color_names_for_console_Vim
@@ -135,8 +135,6 @@ let g:ackprg="ack -H --nocolor --nogroup --column"
 set ww=<,>,[,],h,l
 
 exec 'set colorcolumn=' . join(range(80, 500), ',')
-
-set tw=79
 
 noremap <F5> :tabp<CR>
 noremap <F6> :tabn<CR>
