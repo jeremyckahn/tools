@@ -138,13 +138,12 @@ inoremap <up> <C-C>gka
 " https://github.com/mileszs/ack.vim
 let g:ackprg="ack -H --nocolor --nogroup --column"
 
-
 " Fix Vim's ridiculous line wrapping model
 set ww=<,>,[,],h,l
 
-noremap <F5> :tabp<CR>
-noremap <F6> :tabn<CR>
-noremap <F7> :tabnew<CR>
-noremap <F8> :tabc<CR>
+noremap <C-H> :tabp<CR>
+noremap <C-L> :tabn<CR>
+noremap <C-J> :tabnew<CR>
+noremap <C-K> :tabc<CR>
 
 colorscheme desertEx
