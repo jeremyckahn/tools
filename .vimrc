@@ -149,4 +149,4 @@ noremap <C-L> :tabn<CR>
 noremap <C-J> :tabnew<CR>
 noremap <C-K> :tabc<CR>
 
-colorscheme desertedocean
+colorscheme desertEx
