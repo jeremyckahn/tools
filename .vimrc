@@ -140,3 +140,5 @@ noremap <F5> :tabp<CR>
 noremap <F6> :tabn<CR>
 noremap <F7> :tabnew<CR>
 noremap <F8> :tabc<CR>
+
+colorscheme desertEx

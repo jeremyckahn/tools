@@ -163,7 +163,8 @@ export GIT_PS1_SHOWSTASHSTATE=1
 export GIT_PS1_SHOWUNTRACKEDFILE=1
 export GIT_PS1_SHOWUPSTREAM="auto"
 
-TERM=xterm-256color
+#TERM=xterm-256color
+TERM=screen-256color
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
