@@ -29,8 +29,18 @@ nmap <leader>/ :LustyBufferGrep<Enter>
 nmap <leader>d :w !diff % -<CR>
 
 " Enable or disable auto width-formatting.
-noremap <leader>f :set tw=0<Enter>
-noremap <leader>F :set tw=79<Enter>
+noremap <leader>f :call UnsetGutter()<CR>
+noremap <leader>F :call SetGutter()<CR>
+
+function! SetGutter()
+  set tw=79
+  exec 'set colorcolumn=' . join(range(80, 500), ',')
+endfunction
+
+function! UnsetGutter()
+  set tw=0
+  set colorcolumn=0
+endfunction
 
  autocmd BufWritePre * :%s/\s\+$//e
 "|             |                  | |
@@ -46,8 +56,6 @@ noremap <leader>F :set tw=79<Enter>
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
-
-set colorcolumn=80
 
 " allow buffer switching without saving
 set hidden
@@ -133,8 +141,6 @@ let g:ackprg="ack -H --nocolor --nogroup --column"
 
 " Fix Vim's ridiculous line wrapping model
 set ww=<,>,[,],h,l
-
-exec 'set colorcolumn=' . join(range(80, 500), ',')
 
 noremap <F5> :tabp<CR>
 noremap <F6> :tabn<CR>
