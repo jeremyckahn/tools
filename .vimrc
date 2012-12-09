@@ -1,3 +1,6 @@
+" See this link for installing Command-T for OS X:
+" http://railslove.com/blog/2011/10/17/installing-macvim-with-ruby-support-and-command-t-on-osx-lion
+
 syntax enable
 set number
 set hlsearch
