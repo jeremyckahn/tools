@@ -150,3 +150,9 @@ noremap <C-J> :tabnew<CR>
 noremap <C-K> :tabc<CR>
 
 colorscheme desertEx
+
+" Always show the status line (for vim-powerline)
+set laststatus=2
+
+" Necessary to show Unicode glyphs
+set encoding=utf-8
