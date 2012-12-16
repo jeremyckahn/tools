@@ -146,8 +146,8 @@ set ww=<,>,[,],h,l
 
 noremap <C-H> :tabp<CR>
 noremap <C-L> :tabn<CR>
-noremap <C-J> :tabnew<CR>
-noremap <C-K> :tabc<CR>
+noremap <C-J> :tabc<CR>
+noremap <C-K> :tabe<CR>
 
 colorscheme desertEx
 
