@@ -139,7 +139,7 @@ inoremap <down> <C-C>gja
 inoremap <up> <C-C>gka
 
 " https://github.com/mileszs/ack.vim
-let g:ackprg="ack -H --nocolor --nogroup --column"
+let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
 " Fix Vim's ridiculous line wrapping model
 set ww=<,>,[,],h,l
