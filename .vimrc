@@ -141,6 +141,9 @@ inoremap <up> <C-C>gka
 " https://github.com/mileszs/ack.vim
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
+" The "pipe-quote" is an end-of-line comment.
+nmap <leader>a :Ack |"
+
 " Fix Vim's ridiculous line wrapping model
 set ww=<,>,[,],h,l
 
