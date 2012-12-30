@@ -35,6 +35,9 @@ nmap <leader>d :w !diff % -<CR>
 noremap <leader>f :call UnsetGutter()<CR>
 noremap <leader>F :call SetGutter()<CR>
 
+" Substitute the word under the cursor.
+nmap <leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
+
 function! SetGutter()
   set tw=79
   exec 'set colorcolumn=' . join(range(80, 500), ',')
