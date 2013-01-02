@@ -19,9 +19,6 @@
 [submodule "vim/plugins/EasyGrep"]
 	path = vim/plugins/EasyGrep
 	url = https://github.com/vim-scripts/EasyGrep.git
-[submodule ".vim/bundle/vim-matchit"]
-	path = .vim/bundle/vim-matchit
-	url = https://github.com/tsaleh/vim-matchit.git
 [submodule ".vim/bundle/ack"]
 	path = .vim/bundle/ack
 	url = https://github.com/mileszs/ack.vim.git
