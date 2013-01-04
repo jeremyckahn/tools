@@ -158,6 +158,9 @@ noremap <C-L> :tabn<CR>
 noremap <C-J> :tabc<CR>
 noremap <C-K> :tabe<CR>
 
+" Open the current buffer in a new tab
+noremap <leader>z :tab split<CR>
+
 colorscheme desertEx
 
 " Always show the status line (for vim-powerline)
