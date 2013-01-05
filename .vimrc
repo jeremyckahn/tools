@@ -144,11 +144,10 @@ inoremap <up> <C-C>gka
 " https://github.com/mileszs/ack.vim
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
-" The "pipe-quote" is an end-of-line comment. The space is needed.
 nmap <leader>a :Ack ""<Left>
 
-" Immediately search for the word under the cursor.
-nmap <leader>A :Ack <C-r><C-w><CR>
+" Immediately search for the word under the cursor in a new tab.
+nmap <leader>A :tab split<CR>:Ack <C-r><C-w><CR>
 
 " Fix Vim's ridiculous line wrapping model
 set ww=<,>,[,],h,l
