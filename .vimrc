@@ -145,7 +145,7 @@ inoremap <up> <C-C>gka
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
 " The "pipe-quote" is an end-of-line comment. The space is needed.
-nmap <leader>a :Ack |"
+nmap <leader>a :Ack ""<Left>
 
 " Immediately search for the word under the cursor.
 nmap <leader>A :Ack <C-r><C-w><CR>
