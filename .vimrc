@@ -144,7 +144,8 @@ inoremap <up> <C-C>gka
 " https://github.com/mileszs/ack.vim
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
-nmap <leader>a :Ack ""<Left>
+" Open a new tab and search for something.
+nmap <leader>a :tab split<CR>:Ack ""<Left>
 
 " Immediately search for the word under the cursor in a new tab.
 nmap <leader>A :tab split<CR>:Ack <C-r><C-w><CR>
