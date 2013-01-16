@@ -46,3 +46,6 @@
 [submodule ".vim/bundle/syntastic"]
 	path = .vim/bundle/syntastic
 	url = git://github.com/scrooloose/syntastic.git
+[submodule ".vim/bundle/CSS-one-line--multi-line-folding"]
+	path = .vim/bundle/CSS-one-line--multi-line-folding
+	url = git://github.com/vim-scripts/CSS-one-line--multi-line-folding.git
