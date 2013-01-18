@@ -29,6 +29,7 @@ let mapleader = ","
 nmap <leader>n :NERDTreeToggle<Enter>
 nmap <leader>N :LustyFilesystemExplorer<Enter>
 nmap <leader>/ :LustyBufferGrep<Enter>
+nmap <leader>b :LustyBufferExplorer<Enter>
 nmap <leader>d :w !diff % -<CR>
 
 " Enable or disable auto width-formatting.
