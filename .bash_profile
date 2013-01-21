@@ -41,12 +41,12 @@ alias noblanklines='grep -v "^[[:space:]]*$"'
 
 
 # Push the current directory
-function pushit () {
+function psh () {
   git push origin `git branch | grep \* | sed 's/\* //'`
 }
 
 # Pull the current directory
-function pullit () {
+function pll () {
   git pull origin `git branch | grep \* | sed 's/\* //'`
 }
 
