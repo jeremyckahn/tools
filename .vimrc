@@ -31,6 +31,7 @@ nmap <leader>N :LustyFilesystemExplorer<Enter>
 nmap <leader>/ :LustyBufferGrep<Enter>
 nmap <leader>b :LustyBufferExplorer<Enter>
 nmap <leader>d :w !diff % -<CR>
+nmap <leader>T :CommandTFlush<CR>
 
 " Enable or disable auto width-formatting.
 noremap <leader>f :call UnsetGutter()<CR>
