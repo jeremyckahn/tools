@@ -26,6 +26,7 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias sass_watch='sass --watch style.scss:style.css'
 alias tmux="tmux -2"
+alias ni="node-inspector & sleep .5 && open http://0.0.0.0:8080/debug?port=5858"
 
 # Stolen from: https://gist.github.com/1525217
 alias server='open http://localhost:8000 && python -m SimpleHTTPServer'
