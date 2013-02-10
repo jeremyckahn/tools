@@ -10,6 +10,7 @@ set autoindent
 set expandtab
 set shiftwidth=2
 set softtabstop=2
+setlocal spelllang=en_us
 
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
