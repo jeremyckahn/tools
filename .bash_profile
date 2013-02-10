@@ -5,6 +5,9 @@ export PATH=/usr/local/bin:$PATH
 export PYTHONSTARTUP=$HOME/tools/.pythonstartup
 export EDITOR=vim
 
+# Use Vim editing mode.
+set -o vi
+
 alias ll="ls -lah"
 alias gs='git status'
 alias gd='git diff'
