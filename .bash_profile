@@ -5,8 +5,10 @@ export PATH=/usr/local/bin:$PATH
 export PYTHONSTARTUP=$HOME/tools/.pythonstartup
 export EDITOR=vim
 
-# Use Vim editing mode.
+# Use Vi editing mode.
 set -o vi
+# Fix ctrl+l for clearing the screen in Vi mode
+bind -m vi-insert "\C-l":clear-screen
 
 alias ll="ls -lah"
 alias gs='git status'
